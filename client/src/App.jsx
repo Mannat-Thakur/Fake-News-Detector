@@ -22,7 +22,7 @@ export default function App() {
     setError(null)
 
     try {
-      const res = await fetch('/analyze', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ articleText }),
